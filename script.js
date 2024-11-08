@@ -83,3 +83,73 @@ export function aufgabe03(args) {
 }
 
 linkupExerciseHandler("[data-click=aufgabe03]", aufgabe03)
+export function aufgabe12(args) {
+  const input = args
+  const result = []
+
+  //Erstelle eine Variable und die Position der ersten e's zu speichern
+  let firstE = -1
+
+  for (let i = 0; i < input.length; i++) {
+    const currentElement = input[i]
+    // Finde ein e
+    if (currentElement === "e") {
+      // Speichere die position nur beim ersten e
+      if (firstE === -1) {
+        firstE = i
+      }
+    }
+  }
+  return firstE
+}
+
+linkupExerciseHandler("[data-click=aufgabe12]", aufgabe12)
+
+export function aufgabe04(args) {
+  const input = args
+  const result = []
+  // Erstelle eine Variable um alle Wörter in einem Text zu zaehlen
+  let wordCount = 0
+
+  for (let i = 0; i < input.length; i++) {
+    const currentElement = input[i]
+    // Finde ein Leerzeichen
+    if (currentElement === " ") {
+      // Zähle ein Wort
+      wordCount++
+    }
+  }
+  // Gebe die Anzahl der gefundenen Wörter zurück
+  return wordCount + 1
+}
+linkupExerciseHandler("[data-click=aufgabe04]", aufgabe04)
+
+export function aufgabe05(args) {
+  const input = args
+  const result = []
+
+  // Erstelle eine Variable um die Anzahl der Grossbuchstaben zu zaehlen
+  let capitalLetterCount = 0
+
+  for (let i = 0; i < input.length; i++) {
+    const currentElement = input[i]
+    // Finde ein Leerzeichen oder ein Punkt
+    if (currentElement === " " || currentElement === ".") {
+      // Ignoriere das Leerzeichen oder das Punkt
+    } else if (currentElement === currentElement.toUpperCase()) {
+      //Zahlen ein Grossbuchstabe
+      capitalLetterCount++
+    }
+  }
+
+  //Wenn die Anzahl Grossbuchstabe größer als 0 ist, gebe wahr zurück
+  if (capitalLetterCount > 0) {
+    return true
+  } else {
+    return false
+  }
+}
+
+linkupExerciseHandler("[data-click=aufgabe05]", aufgabe05)
+
+export function
