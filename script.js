@@ -52,10 +52,34 @@ export function aufgabe02(args) {
 
   for (let i = 0; i < input.length; i++) {
     const currentElement = input[i]
-    result.push(currentElement)
-    result.push(currentElement)
+    const currentUpperCaseLetter = currentElement.toUpperCase()
+    result.push(currentUpperCaseLetter)
   }
   return result.join("")
 }
 
 linkupExerciseHandler("[data-click=aufgabe02]", aufgabe02)
+
+export function aufgabe03(args) {
+  const input = args
+  const result = []
+
+  //Erstelle eine Variable um alle e's zu zaehlen
+  let eCount = 0
+  for (let i = 0; i < input.length; i++) {
+    //Zaehle alle e's in einem Text
+    const currentElement = input[i]
+    //Finde ein e
+    if (currentElement === "e") {
+      //Zaehle ein e
+      eCount++
+    } else if (currentElement === "E") {
+      //Zaehle auch ein E
+      eCount++
+    }
+  }
+  // Gebe die Anzahl der e's zurueck
+  return eCount
+}
+
+linkupExerciseHandler("[data-click=aufgabe03]", aufgabe03)
