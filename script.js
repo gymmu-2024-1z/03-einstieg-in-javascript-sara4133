@@ -152,4 +152,136 @@ export function aufgabe05(args) {
 
 linkupExerciseHandler("[data-click=aufgabe05]", aufgabe05)
 
-export function
+export function aufgabe06(args) {
+  const input = args
+  const result = []
+  // Erstelle eine Variable um alle Sonderzeichen zu zaehlen
+  let specialCharacterCount = 0
+
+  for (let i = 0; i < input.length; i++) {
+    const currentElement = input[i]
+    // Finde ein Sonderzeichen
+    if (
+      currentElement === "!" ||
+      currentElement === "?" ||
+      currentElement === "." ||
+      currentElement === ":" ||
+      currentElement === "/" ||
+      currentElement === "\\" ||
+      currentElement === "-" ||
+      currentElement === "_" ||
+      currentElement === "@" ||
+      currentElement === " " ||
+      currentElement === "," ||
+      currentElement === ";"
+    ) {
+      // Zähle ein Sonderzeichen
+      specialCharacterCount++
+    }
+  }
+
+  // Wenn die Anzahl Sonderzeichen über 0 ist, gebe wahr zurueck
+  if (specialCharacterCount > 0) {
+    return true
+  } else {
+    return false
+  }
+}
+
+linkupExerciseHandler("[data-click=aufgabe06]", aufgabe06)
+
+export function aufgabe07(args) {
+  const input = args
+  const result = []
+
+  // Erstelle eine Variable um zu testen ob das Wort 'und' vorkommt
+  let wordCount = 0
+
+  for (let i = 0; i < input.length; i++) {
+    const currentElement = input[i]
+    // Finde das Wort 'und'
+    if (
+      currentElement === "u" &&
+      input[i + 1] === "n" &&
+      input[i + 2] === "d"
+    ) {
+      // Zähle ein Wort
+      wordCount++
+    }
+  }
+
+  // Wenn das Wort 'und' vorkommt, gebe wahr zurueck
+  if (wordCount > 0) {
+    return true
+  } else {
+    return false
+  }
+}
+
+linkupExerciseHandler("[data-click=aufgabe07]", aufgabe07)
+
+export function aufgabe08(args) {
+  const input = args
+  const result = []
+
+  // Erstelle eine Variabe um alle e's  mit 3 zu ersetzen in einem Text
+  for (let i = 0; i < input.length; i++) {
+    const currentElement = input[i]
+    // Finde ein e
+    if (currentElement === "e") {
+      // Ersetze ein e mit 3
+      result.push("3")
+    } else {
+      // Gebe das aktuelle Element zurueck
+      result.push(currentElement)
+    }
+  }
+  // Gebe das Ergebnis zurueck
+  return result.join("")
+}
+
+linkupExerciseHandler("[data-click=aufgabe08]", aufgabe08)
+
+export function aufgabe09(args) {
+  const input = args
+  const result = []
+
+  // Erstelle eine Variable um zu testen ob eine Eingabe genau 6 Elemente hat
+  if (input.length === 6) {
+    return true
+  } else {
+    return false
+  }
+}
+
+linkupExerciseHandler("[data-click=aufgabe09]", aufgabe09)
+
+export function aufgabe13(args) {
+  const input = args
+  const result = []
+
+  // Erstelle eine Variable um zu testen an welcher Stelle das letzte e steht
+  for (let i = 0; i < input.length; i++) {
+    const currentElement = input[i]
+    if (currentElement === "e") {
+      result.push(i)
+    }
+  }
+  return result[2]
+}
+linkupExerciseHandler("[data-click=aufgabe13]", aufgabe13)
+
+export function aufgabe14(args) {
+  const input = args
+  const result = []
+  // Erstelle eine Variable um die Position des dritten e's zu bestimmen
+  for (let i = 0; i < input.length; i++) {
+    const currentElement = input[i]
+    if (currentElement === "e") {
+      result.push(i)
+    }
+  }
+  return result[2]
+}
+
+linkupExerciseHandler("[data-click=aufgabe14]", aufgabe14)
