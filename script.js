@@ -351,14 +351,40 @@ export function aufgabe20(args) {
     const currentElement = input[i]
     if (currentElement === " ") {
       // Erstelle ob als nächstes ein Leerzeichen vorkommt
-      if (input{i + 1} === " ") {
+      if (input[i + 1] === " ") {
         // return true
       } else {
         return false
       }
     }
-    }
-    return true
   }
+  return true
+}
 
-  linkupExerciseHandler("[data-click=aufgabe20]", aufgabe20)
+linkupExerciseHandler("[data-click=aufgabe20]", aufgabe20)
+
+export function aufgabe21(args) {
+  const input = args
+  const result = []
+
+  for (let i = input.length - 1; i >= 0; i--) {
+    const currentElement = input[i]
+    result.push(currentElement)
+  }
+  return result.join("")
+}
+
+linkupExerciseHandler("[data-click=aufgabe21]", aufgabe21)
+
+export function aufgabe22(args) {
+  const input = args
+  const result = [] // Erstelle eine Variable um die Eingabe
+
+  for (let i = 0; i < input.length; i++) {
+    const currentElement = input[i]
+    if (currentElement === " ") {
+      result.push(i)
+    }
+  }
+  return result[result.length - 1]
+}
