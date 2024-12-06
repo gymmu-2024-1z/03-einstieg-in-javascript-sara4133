@@ -316,8 +316,6 @@ export function aufgabe18(args) {
     } else if (currentElement === "m") {
       result.push("r")
     } else if (currentElement === "e") {
-      result.push("a")
-    } else if (currentElement === "Alter") {
       result.push("16")
     } else {
       result.push(currentElement)
@@ -378,13 +376,62 @@ linkupExerciseHandler("[data-click=aufgabe21]", aufgabe21)
 
 export function aufgabe22(args) {
   const input = args
-  const result = [] // Erstelle eine Variable um die Eingabe
+  const result = [] // Erstelle eine Variable um alle Zeichen mit einem _ zu ersetzen,  bis das Zeichen k kommt, dann aufhören
+
+  let switchFirst = true
 
   for (let i = 0; i < input.length; i++) {
     const currentElement = input[i]
-    if (currentElement === " ") {
-      result.push(i)
+    if (currentElement === "k") {
+      switchFirst = false
     }
   }
-  return result[result.length - 1]
+  if (switchFirst === true) {
+    result.push("_")
+  } else {
+    result.push(currentElement)
+  }
+  return result.join("")
 }
+
+linkupExerciseHandler("[data-click=aufgabe22]", aufgabe22)
+
+export function aufgabe16(args) {
+  const input = args
+  let switchFirst = true
+  const listFirst = []
+  const listSecond = []
+
+  // Erstelle eine Variable um die Eingabe nur bis zum ersten $ als ersten Teil einer Liste zu speichern
+  for (let i = 0; i < input.length; i++) {
+    const currentElement = input[i]
+    if (currentElement === "$") {
+      switchFirst = !switchFirst
+    } else if (switchFirst) {
+      listFirst.push(currentElement)
+    } else {
+      listSecond.push(currentElement)
+    }
+  }
+  return [listFirst.join(""), listSecond.join("")]
+}
+
+linkupExerciseHandler("[data-click=aufgabe16]", aufgabe16)
+
+export function meineAufgabe01(args) {
+  const input = args
+  const result = []
+
+  // Erstelle  eine Variable um alle n's mit einem % zu ersetzen
+  for (let i = 0; i < input.length; i++) {
+    const currentElement = input[i]
+    if (currentElement === "n") {
+      result.push("4133")
+    } else {
+      result.push(currentElement)
+    }
+  }
+  return result.join("")
+}
+
+linkupExerciseHandler("[data-click=meineAufgabe01]", meineAufgabe01)
