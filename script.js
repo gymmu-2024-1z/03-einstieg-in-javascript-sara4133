@@ -435,3 +435,37 @@ export function meineAufgabe01(args) {
 }
 
 linkupExerciseHandler("[data-click=meineAufgabe01]", meineAufgabe01)
+
+export function meineAufgabe02(args) {
+  const input = args
+  const result = []
+
+  for (let i = 0; i < input.length; i++) {
+    const currentElement = input[i]
+
+    const code = currentElement.charCodeAt(0)
+    const letter = String.fromCharCode(code + 4)
+    result.push(letter)
+  }
+
+  return result.join("")
+}
+
+linkupExerciseHandler("[data-click=meineAufgabe02]", meineAufgabe02)
+
+export function meineAufgabe03(args) {
+  const input = args
+  const result = []
+  //Erstelle eine Variable um jede Kommazahl in einer Eingabe zu ersetzen
+  for (let i = 0; i < input.length; i++) {
+    const currentElement = input[i]
+    if (currentElement === ",") {
+      result.push(".")
+    } else {
+      result.push(currentElement)
+    }
+  }
+  return result.join("")
+}
+
+linkupExerciseHandler("[data-click=meineAufgabe03]", meineAufgabe03)

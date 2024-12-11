@@ -157,4 +157,9 @@ Ersetze alle `n`s mit einem `4133`
 
 ## Meine Aufgabe 02
 
+Text in ASCII umwandeln, 4 dazu addieren und zurück in einen Buchstaben
+verwandeln
+
 ## Meine Aufgabe 03
+
+Erkenne alle Kommazahlen in einem Text und ersetze als ein Punkt
