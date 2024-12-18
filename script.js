@@ -489,3 +489,29 @@ export function bubbleSort(args) {
 }
 
 linkupExerciseHandler("[data-click=bubbleSort]", bubbleSort)
+
+export function aufgabe17(args) {
+  const input = args
+  const totalList = []
+  const currentList = []
+
+  for (let i = 0; i < input.length; i++) {
+    const currentElement = [i]
+    // Wenn wie ein Leerzeichen treffen, dann schreiben wir alles was wir bisher gefunden haben in die totalist
+
+    if (currentElement === " ") {
+      totalList.push(currentList.join(""))
+      currentlist.length = 0
+    } else {
+      currentList.push(currentElement)
+    }
+  }
+
+  //Wir schreiben alles was wir noch bis zum Ende gelesen haben in die totalist
+
+  totalList.push(currentList.join(""))
+
+  return totalList
+}
+
+linkupExerciseHandler("[data-click=aufgabe17]", aufgabe17)
