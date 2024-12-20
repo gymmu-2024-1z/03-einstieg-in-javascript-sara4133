@@ -496,12 +496,12 @@ export function aufgabe17(args) {
   const currentList = []
 
   for (let i = 0; i < input.length; i++) {
-    const currentElement = [i]
+    const currentElement = input[i]
     // Wenn wie ein Leerzeichen treffen, dann schreiben wir alles was wir bisher gefunden haben in die totalist
 
     if (currentElement === " ") {
       totalList.push(currentList.join(""))
-      currentlist.length = 0
+      currentList.length = 0
     } else {
       currentList.push(currentElement)
     }
